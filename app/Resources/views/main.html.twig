@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{% block title %}tlyer.com{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmemain/css/style.css') }}" />
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmemain/css/ie.css') }}" /><![endif]-->
+</head>
+
+<body>
+<div id="wrapper">
+
+	{% include '::header.html.twig' %}
+	
+	{% include '::lsider.html.twig' %}
+	
+	{% block content %}{% endblock %}
+
+	{% include '::rsider.html.twig' %}
+
+	<div class="break"></div>
+</div>
+
+{% include '::footer.html.twig' %}
+</body>
+</html>

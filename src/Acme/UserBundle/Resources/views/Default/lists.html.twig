@@ -1,0 +1,7 @@
+{% extends '::main.html.twig' %}
+
+{% block content %}
+	{% for list in lists %}
+		{{ list.username }}
+	{% endfor %}
+{% endblock %}

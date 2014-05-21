@@ -1,0 +1,12 @@
+<!-- src/Acme/UseBundle/Resources/config/doctrine/User.orm.xml -->
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+	<entity name="Acme\UserBundle\Entity\User" table="user" repository-class="Acme\UserBundle\Repository\UserRepository">
+		<id name="uid" type="integer" column="uid">
+			<generator strategy="AUTO" />
+		</id>
+        <field name="username" column="username" type="string" length="30" unique="true" />
+		<field name="password" column="password" type="string" length="50" />
+		<field name="sex" column="sex" type="smallint" />
+		<field name="email" column="email" type="string" length="50" unique="true" />
+	</entity>
+</doctrine-mapping>
