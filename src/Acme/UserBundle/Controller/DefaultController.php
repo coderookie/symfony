@@ -4,8 +4,6 @@ namespace Acme\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
-
 use Acme\UserBundle\Entity\User;
 
 class DefaultController extends Controller
@@ -30,13 +28,14 @@ class DefaultController extends Controller
 	}
 
 	public function registerAction(){
-		$user = new User();
-		$user->setUsername('symfony');
-		$user->setPassword(md5('symfony'));
-		$user->setSex('1');
-		$user->setEmail('zhanglei19881228@sina.com');
-		$user_em = $this->getDoctrine()->getEntityManager();
-		$user_em->persist($user);
-		$user_em->flush();
+        $user = new User();
+        $user->setUsername('symfony');
+        $user->setPassword(md5('symfony'));
+        $user->setSex('1');
+        $user->setEmail('zhanglei19881228@sina.com');
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($user);
+        $em->flush();
+        return $this->redirect('/app.php/user/list');
 	}
 }

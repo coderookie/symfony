@@ -65,13 +65,12 @@ img {
 			color: #ffffff;
 			text-decoration: none;
 		}
-	#header .rss {
+	#header .menu {
 		float: right;
 		color: #ffffff;
 		text-decoration: none;
 		display: block;
-		padding: 10px 0 0 24px;
-		background: url(../images/rss.gif) no-repeat 0 8px;
+		padding: 10px 0 0 15px
 	}
 	#header h1 {
 		clear: both;
